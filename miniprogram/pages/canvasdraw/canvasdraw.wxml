@@ -1,0 +1,45 @@
+<!--miniprogram/pages/canvasdraw/canvasdraw.wxml-->
+<!-- <text>自定义canvas画板</text> -->
+<view class='main-body'>
+<view class="setTop">
+  <view class="set-item set-out" bindtap='clearAll'>清空</view>
+  <view class="set-item set-return">撤销</view>
+  <view class="set-item set-save" bindtap='saveBtn'>保存</view>
+  
+  
+</view>
+<view class="draw-con" hidden="{{isShowPicModal}}">
+  <canvas canvas-id="drawcanvas" 
+  style="width: 100%; height: 100%;border:1px dashed #aaa" 
+  disable-scroll
+  bindtouchstart="drawtouchstart"
+  bindtouchmove="drawtouchmove"
+  bindtouchend="drawtouchend">
+  </canvas>
+</view>
+<view class="bottom">
+  <view class="set-pen">
+    细
+    <slider bindchange="penChange" class="pen-size" max="30" min="1"/>
+    粗
+    <view class="set-eraser" bindtap='eraser'>橡皮</view>
+  </view>
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+  <view class="set-color">
+    <view wx:for="{{colorlist}}" class="color-list">
+      <view style="background:{{item}}" class="color-item" bindtap='changecolor' data-color="{{item}}">
+        <view class="{{pencolor == item?'active-color':''}} color-item-sm"></view>
+      </view>
+    </view>
+  </view>
+  </scroll-view>
+</view>
+<view class="img-modal" wx:if="{{isShowPicModal}}">
+  <view style="width:700rpx;margin:7vh auto"><image style="width:700rpx;height:800rpx;" src="{{imgUrl}}"></image></view>
+  <view class="btn-group">
+    <button type="primary" bindtap='savePhone'>保存到手机</button>
+    <button bindtap='cancel'>取消</button>
+  </view>
+  
+</view>
+</view>

@@ -1,0 +1,13 @@
+<!--miniprogram/pages/analyse-img/analyse-img.wxml-->
+<view class="main" wx:if="{{statusType == 'upload'}}">
+  <view class="button-group">
+    <button bindtap='selectImg'>拍照识花</button>
+    <button bindtap='selectImg'>从相册上传</button>
+  </view>
+</view>
+<view wx:else class="result-main">
+  <view class="result-top">
+    <image src="{{imgSrc}}" style="width:100%;height:500rpx"></image>
+  </view>
+  
+</view>

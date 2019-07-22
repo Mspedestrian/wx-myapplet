@@ -1,0 +1,103 @@
+/* miniprogram/pages/canvasdraw/canvasdraw.wxss */
+.main-body {
+  font-size: 30rpx;
+  /* height: 100vh; */
+  width:100%;
+  overflow: hidden;
+  position: relative;
+}
+.setTop {
+  background: #f6f8f8;
+  border-bottom: 1px solid #aaa;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  display: flex;
+}
+.set-out {
+  flex:5;
+}
+.set-save,.set-return {
+  flex:1;
+}
+
+
+
+.bottom {
+  background: #f6f8f8;
+  border-top: 1px solid #aaa;
+  width: 100%;
+  height: 200rpx;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  position: fixed;
+  bottom:0;
+}
+.pen-size {
+  width: 300rpx;
+  display: inline-block;
+}
+.set-eraser {
+  display: inline-block;
+  width: 200rpx;
+  text-align: right;
+
+}
+
+.set-color {
+  display: flex;
+}
+::-webkit-scrollbar {
+        display: none;
+    }
+.color-item {
+  width:60rpx;
+  height:60rpx;
+  border-radius: 100%;
+  margin-right: 20rpx;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active-color {
+  width: 30rpx;
+  height:30rpx;
+  border-radius: 100%;
+  background: #f6f8f8 !important;
+  animation: colorAni .6s forwards;
+  
+}
+@keyframes colorAni {
+  from {
+    transform: scale(0.2)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.draw-con {
+  width: 700rpx;
+  height: 800rpx;
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  margin:50rpx auto;
+}
+
+
+.img-modal {
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+}
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+.btn-group button {
+  width: 300rpx;
+}
