@@ -1,9 +1,10 @@
 {
   "cloud": true,
   "pages": [
-    "pages/analyse-img/analyse-img",
     "pages/home/home",
-    "pages/canvasdraw/canvasdraw",
+    "pages/old/analyse-img/analyse-img",
+    "pages/old/home/home",
+    "pages/old/canvasdraw/canvasdraw",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -27,11 +28,11 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/canvasdraw/canvasdraw",
+        "pagePath": "pages/old/canvasdraw/canvasdraw",
         "text": "画画"
       },
       {
-        "pagePath": "pages/analyse-img/analyse-img",
+        "pagePath": "pages/old/analyse-img/analyse-img",
         "text": "识图"
       }
     ]
